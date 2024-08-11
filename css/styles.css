@@ -82,6 +82,8 @@ footer p {
 
 #calculadora {
     margin-top: 40px;
+    display: flex;
+    justify-content: center;
 }
 
 #calculadora .content {
@@ -89,6 +91,88 @@ footer p {
     flex-direction: column;
     align-items: center;
     gap: 20px;
+    background-color: lightgrey;
+    margin-right: 25px;
+    border-radius: 20px;
+    padding: 20px;
+    
 }
 
+#calcular_imc_boton{
+    background-color: rgba(44, 116, 249, 0.933);
+    color: white;
+    padding: 10px;
+    width: 100%;
+    border-radius: 8px;
+}
 
+#cuadroimc{
+    flex-direction: column;
+    display: flex;
+    width: 500px;
+    border-radius: 20px;
+    background-color: rgba(30, 69, 168, 0.851);
+    color: white;
+}
+#ip{
+    background-color: rgba(205, 196, 196, 0.8);
+    padding: 1%;
+    height: 30px;
+    display: flex;
+    justify-content: space-between;
+    
+}
+
+#pon{
+    color: rgba(30, 69, 168, 0.851);
+}
+
+h5{
+    margin-top: 10px;
+    margin-bottom: 0px;
+}
+
+#nm{
+    background-color: greenyellow;
+    padding-top: 0%;
+    height: 30px;
+    display: flex;
+    justify-content: space-between;
+    padding: 1%;
+    
+}
+
+#sp{
+    background-color: yellow;
+    height: 30px;
+    display: flex;
+    justify-content: space-between;
+    padding: 1%;
+    color: rgba(30, 69, 168, 0.851);
+}
+
+#ob1{
+    background-color: orange;
+    height: 30px;
+    display: flex;
+    justify-content: space-between;
+    padding: 1%;
+}
+
+#ob2{
+    background-color: orangered;
+    height: 30px;
+    display: flex;
+    justify-content: space-between;
+    padding: 1%;
+}
+
+#ob3{
+    background-color: red;
+    height: 30px;
+    display: flex;
+    justify-content: space-between;
+    padding: 1%;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+}

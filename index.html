@@ -1,11 +1,13 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>JavaScript en el Desarrollo Web</title>
     <link rel="stylesheet" href="css/styles.css">
 </head>
+
 <body>
     <header>
         <h1>JavaScript en el Desarrollo Web</h1>
@@ -15,7 +17,8 @@
         <h2>¿Qué es JavaScript?</h2>
         <div class="content">
             <img src="img/javascript.png" alt="Imagen relacionada con JavaScript">
-            <p>JavaScript es un <strong>lenguaje de programación</strong> que permite añadir interactividad a tu sitio web. Es uno de los lenguajes más populares y es compatible con todos los navegadores modernos.</p>
+            <p>JavaScript es un <strong>lenguaje de programación</strong> que permite añadir interactividad a tu sitio
+                web. Es uno de los lenguajes más populares y es compatible con todos los navegadores modernos.</p>
         </div>
     </section>
 
@@ -23,7 +26,9 @@
         <h2>Cómo utilizar JavaScript en una página web</h2>
         <div class="content">
             <img src="img/javascript-tips.jpg" alt="Imagen ilustrativa del uso de JavaScript">
-            <p>Para utilizar JavaScript en una página web, puedes escribir tu código dentro de la etiqueta <code>&lt;script&gt;</code>. Aquí tienes un ejemplo:</p>
+            <p>Para utilizar JavaScript en una página web, puedes escribir tu código dentro de la etiqueta
+                <code>&lt;script&gt;</code>. Aquí tienes un ejemplo:
+            </p>
             <pre><code>&lt;script&gt;
     console.log('Hola, JavaScript!');
 &lt;/script&gt;</code></pre>
@@ -34,25 +39,81 @@
         <h2>Manejo de Variables en JavaScript</h2>
         <div class="content">
             <img src="img/boxes.png" alt="Imagen sobre manejo de variables en JavaScript">
-            <p>Las variables en JavaScript se utilizan para almacenar datos que pueden cambiar durante la ejecución del programa. Puedes declarar una variable utilizando las palabras clave <code>var</code>, <code>let</code>, o <code>const</code>. Ejemplo:</p>
+            <p>Las variables en JavaScript se utilizan para almacenar datos que pueden cambiar durante la ejecución del
+                programa. Puedes declarar una variable utilizando las palabras clave <code>var</code>, <code>let</code>,
+                o <code>const</code>. Ejemplo:</p>
             <pre><code>let nombre = 'Edwin'; 
 const edad = 41;</code></pre>
         </div>
     </section>
 
-    <section id="calculadora">
+    <section>
         <h2>Ejemplo Calculadora de IMC</h2>
-        <div class="content">
-            <!-- josue aqui añade el código de la calculadora -->
-             <h2></h2>
-             <h2></h2>
-             <h2></h2>       
+        <div id="calculadora">
+            <div class="content">
+                <!-- josue aqui añade el código de la calculadora -->
+                <h3>Calculadora de IMC</h3>
+                <span>Peso (Kg)</span>
+                <input id="peso" type="text">
+                <span>Altura (m)</span>
+                <input id="altura" type="text">
+                <input id="calcular_imc_boton" type="button" value="Calcular IMC" onclick="calcularImc()">
+                <span>Tu IMC es: <span id="calculo"></span></span>
+            </div>
+            <div class="content">
+                <div id="cuadroimc">
+                    <div>
+                        <h3>IMC</h3>
+                    </div>
+                    <div id="ip">
+                        <h5>Insuficiencia <span id="pon">Ponderal</span></h5>
+                        <h5><18,4</h5>
+                    </div>
+                    <div id="nm">
+                        <h5>Normal</h5>
+                        <h5>18.5 - 24.9</h5>
+                    </div>
+                    <div id="sp">
+                        <h5>Sobrepeso</h5>
+                        <h5>25 - 29.9</h5>
+                    </div>
+                    <div id="ob1">
+                        <h5>Obesidad I</h5>
+                        <h5>30 - 34.9</h5>
+                    </div>
+                    <div id="ob2">
+                        <h5>Obesidad II</h5>
+                        <h5>35 - 39.9</h5>
+                    </div>
+                    <div id="ob3">
+                        <h5>Obesidad III</h5>
+                        <h5>≥ 40</h5>
+                    </div>
+                    </div>
+                </div>
+            </div>
         </div>
     </section>
 
     <footer>
         <p>&copy; 2024 - Josue y Rene. Todos los derechos reservados.</p>
     </footer>
-</body>
-</html>
+    <script>
+        console.log('Hola, JavaScript!');
+        let boton = document.getElementById("calcular_imc_boton")
+        let calculo = document.getElementById("calculo")
+        function calcularImc() {
 
+            let peso = document.getElementById("peso").value
+            console.log("El Imc es: ", peso)
+            let altura = document.getElementById("altura").value
+            console.log("El Imc es: ", altura)
+            let imc = peso/Math.pow(altura, 2)
+            console.log("El Imc es: ", Number(imc.toFixed(1)))
+            calculo.textContent = Number(imc.toFixed(1))
+
+        }
+    </script>
+</body>
+
+</html>
